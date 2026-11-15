@@ -1,4 +1,4 @@
-# PE0400C0 HEX Updater Web 0.1.4
+# PE0400C0 HEX Updater Web 0.1.5
 
 [Open in desktop Chrome](https://marstw2.github.io/pe0400c0-hex-updater/)
 
@@ -18,8 +18,10 @@ success; transfer 100% is not success.
 
 Web and local tools have separate histories, settings, tab locks and device
 permissions. Resolve any interrupted or uncertain update in the original tool
-before continuing. Use only one updater at a time. The acknowledgement cannot
-inspect another origin or clear a known unresolved session. Export a log and ask
+before continuing. Use only one updater at a time. This reminder appears in the
+final update confirmation; selecting Update once acknowledges it. There is no
+separate firmware-step checkbox. The confirmation cannot inspect another origin
+or clear a known unresolved session. Export a log and ask
 engineering to diagnose an unknown device result; do not switch tools to retry.
 
 Runtime: .NET 10 LTS 10.0.15; build SDK: 10.0.404. Users install neither .NET nor
@@ -29,7 +31,7 @@ maintainer; this repository contains only the reviewed static web publication.
 ## Deployment and maintenance
 
 GitHub Pages publishes the root of `main` with `.nojekyll` and HTTPS. The fixed
-entry redirects to `versions/0.1.4/`; retain version directories unchanged.
+entry redirects to `versions/0.1.5/`; retain version directories unchanged.
 Deploy each reviewed future release in a new version directory, then update the
 entry redirect. Keep the same origin to retain browser history and preferences.
 Rollback redirects only to a separately validated release; never clear journals.
@@ -39,6 +41,6 @@ Rollback redirects only to a separately validated release; never clear journals.
 debug symbols or original BOOT/APP project. Compiled browser code is downloadable.
 Third-party notices do not grant a license for the project-specific updater code.
 
-Verification: 210 C# checks, 23 JavaScript checks, 6 launcher cases, Chrome offline
+Verification: 210 C# checks, 19 JavaScript checks, 6 launcher cases, Chrome offline
 workflow tests and independent desktop verification of actual WASM packages.
 BUILD/OFFLINE evidence does not establish TRANSPORT, HARDWARE, HMI or POWER_LOSS.
