@@ -1,11 +1,18 @@
-# PE0400C0 HEX Updater Web 0.1.5
+# PE0400C0 HEX Updater Web 0.1.7
 
 [Open in desktop Chrome](https://mars-program.github.io/pe0400c0-hex-updater/)
 
-Engineering preview for Windows 11 and macOS 27 desktop Chrome. Select an APP HEX,
-wait for automatic validation, select your USB serial device, review the target,
-and explicitly confirm the RESET update. The device must be connected to your own
-computer. macOS execution and physical serial/hardware qualification remain NOT_RUN.
+Engineering tool for Windows 11 and macOS 27 desktop Chrome. Connect and identify
+your device first, review its BOOT-dependent available actions, then choose an APP
+HEX for automatic validation. The next step checks the live device again before
+the final RESET confirmation. The device must be connected to your own computer.
+
+Version 0.1.7 recognizes the BOOT 4.0 family using a revisioned compatibility
+registry. Unknown families are blocked. A matching version does not replace exact
+live capability, contract, Flash or package checks. APP HEX/RESET is implemented;
+image and video actions display their availability but have no sender in this
+tool. Live media capability is not queried. Back to device clears the reviewed
+identity and prepared package, requiring identification again.
 
 HEX parsing, package creation and serial communication happen on your computer.
 Firmware is not uploaded to GitHub. This website has public anonymous access;
@@ -34,7 +41,7 @@ Owned by **Mars-Program**. Full source is maintained in the organization's priva
 `pe0400c0-hex-updater-source` repository. This repository keeps the original 0.1.4
 and 0.1.5 history and only publishes reviewed static assets.
 
-Current engineering baseline: **0.1.5**. Feature work uses branches and PRs, with
+Current engineering baseline: **0.1.7**. Feature work uses branches and PRs, with
 build checks and an explicit user acceptance record. Merging or tagging never
 updates the live website. Production uses the manually dispatched **Publish
 approved website** workflow and waits for MarsTW2's environment approval.
@@ -49,6 +56,10 @@ use the organization website above. Original-origin histories are not migrated.
 debug symbols or original BOOT/APP project. Compiled browser code is downloadable.
 Third-party notices do not grant a license for the project-specific updater code.
 
-Verification: 210 C# checks, 19 JavaScript checks, 6 launcher cases, Chrome offline
-workflow tests and independent desktop verification of actual WASM packages.
-BUILD/OFFLINE evidence does not establish TRANSPORT, HARDWARE, HMI or POWER_LOSS.
+Verification: 765 C# checks, 27 JavaScript checks, 6 launcher cases and 51 Windows
+Chrome offline workflow checks using the exact CI WASM with simulated serial.
+The hosted candidate also passed read-only identification of BOOT 4.0.16 / APP
+4.2.1, rejection of an invalid HEX and automatic validation of a real APP HEX.
+No update payload was sent during that test. Physical update, HMI, POWER_LOSS and
+macOS execution remain NOT_RUN for 0.1.7. BUILD/OFFLINE and a read-only query never
+establish a successful physical firmware update.

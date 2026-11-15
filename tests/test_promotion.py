@@ -41,6 +41,20 @@ class PromotionChecks(unittest.TestCase):
         self.assertEqual((self.root / 'releases/0.1.7-preview.json').read_bytes(), self.raw)
         self.assertFalse((self.root / 'versions/0.1.7/candidate.json').exists())
 
+    def test_reviewed_engine_loader_is_promoted_with_integrity(self):
+        data = b'// bounded engine loader fixture'
+        name = 'app/engine-loader.js'
+        self.record['files'].append({'path': name, 'bytes': len(data),
+                                     'sha256': hashlib.sha256(data).hexdigest()})
+        raw = json.dumps(self.record).encode()
+        self.payload[self.url + 'candidate.json'] = raw
+        self.payload[self.url + name] = data
+        result = promote_preview.prepare(self.root, self.record['candidateId'],
+                                         hashlib.sha256(raw).hexdigest(),
+                                         'Synthetic unit-test acceptance only', self.fetch)
+        self.assertEqual(result['result'], 'PASS')
+        self.assertEqual((self.root / 'versions/0.1.7/engine-loader.js').read_bytes(), data)
+
     def test_tampered_download_does_not_modify_publication(self):
         before = (self.root / 'SHA256SUMS.json').read_bytes()
         self.payload[self.url + 'app/app.js'] = b'tampered'
