@@ -1,10 +1,10 @@
 {
-  "version": "0.1.7",
+  "version": "0.1.8",
   "sourceRepository": "Mars-Program/pe0400c0-hex-updater-source",
-  "sourceCommit": "10a51049d19783f4e022dc0a213d479e3697ab67",
-  "sourceTree": "c2c409317586f4e4f5bb16199157ed8b2a64d334",
-  "localZipName": "PE0400C0_HEX_Updater_Web_0.1.7_DRAFT-20261115-001.zip",
-  "localZipSha256": "9A972259A5DD47B19AF2CD9DE6973DDFCFB20237518D1F4862DEBDD9FE7B0671",
+  "sourceCommit": "de2ada6d820b4390e065c14aaa9bff0b89df30bb",
+  "sourceTree": "73fc44ddb9f8cc827a16420e5319544758a64159",
+  "localZipName": "PE0400C0_HEX_Updater_Web_0.1.8_DRAFT-20261115-001.zip",
+  "localZipSha256": "F1BC9FB626F5914678F58E7164A6834C206A1F4259AD6CD1464AAB8986826426",
   "validation": {
     "BUILD": "PASS",
     "OFFLINE": "PASS",
@@ -16,15 +16,15 @@
   },
   "schema": 1,
   "kind": "ACCEPTED_PREVIEW",
-  "siteManifestSha256": "DECA622105578DBB95A730C95A83AE7507AC8FEE76B25F691F93BA4B2B3D4285",
+  "siteManifestSha256": "D9102F9E77CD4BC98F9CF00767DEBDB10D6446F05D0DA012F6417287D26C05DB",
   "preview": {
-    "candidateId": "0.1.7-20261116-001",
-    "url": "https://mars-program.github.io/pe0400c0-hex-updater-preview/candidates/0.1.7-20261116-001/",
-    "manifestUrl": "https://mars-program.github.io/pe0400c0-hex-updater-preview/candidates/0.1.7-20261116-001/candidate.json",
-    "manifestSha256": "DB76F44A5A74668D858D86DA52459AA861C48690516174567AEEC93D9A4D4090"
+    "candidateId": "0.1.8-20261116-001",
+    "url": "https://mars-program.github.io/pe0400c0-hex-updater-preview/candidates/0.1.8-20261116-001/",
+    "manifestUrl": "https://mars-program.github.io/pe0400c0-hex-updater-preview/candidates/0.1.8-20261116-001/candidate.json",
+    "manifestSha256": "B7462A7671378B1558222ECD8D4BA092614A2FB37CE36F02A14D2A1AEC085E4A"
   },
   "approval": {
-    "reference": "User direction 2026-11-16: implement the corrected device-first BOOT/action workflow, publish production after tests, deliver the matching local version and retain history. Exact candidate 0.1.7-20261116-001 with record SHA256 DB76F44A5A74668D858D86DA52459AA861C48690516174567AEEC93D9A4D4090 is the frozen implementation. Source PR #4 and BOOT:TASK-20261116-002 record tests. Physical authorization is version QUERY only. No authority for future releases.",
-    "recordedAt": "2026-11-15T17:44:17+00:00"
+    "reference": "User acceptance in this chat on 2026-11-16: 0.1.8 tested successfully; publish production and matching local version, retain old versions and complete Git history. This accepts the previously delivered immutable candidate 0.1.8-20261116-001, record SHA256 B7462A7671378B1558222ECD8D4BA092614A2FB37CE36F02A14D2A1AEC085E4A. BOOT:TASK-20261116-004; source PR #5; no authority for future releases or device operations.",
+    "recordedAt": "2026-11-15T18:27:52+00:00"
   }
 }

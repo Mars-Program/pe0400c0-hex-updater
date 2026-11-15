@@ -1,0 +1,30 @@
+{
+  "version": "0.1.8",
+  "sourceRepository": "Mars-Program/pe0400c0-hex-updater-source",
+  "sourceCommit": "de2ada6d820b4390e065c14aaa9bff0b89df30bb",
+  "sourceTree": "73fc44ddb9f8cc827a16420e5319544758a64159",
+  "localZipName": "PE0400C0_HEX_Updater_Web_0.1.8_DRAFT-20261115-001.zip",
+  "localZipSha256": "F1BC9FB626F5914678F58E7164A6834C206A1F4259AD6CD1464AAB8986826426",
+  "validation": {
+    "BUILD": "PASS",
+    "OFFLINE": "PASS",
+    "TRANSPORT": "NOT_RUN",
+    "HARDWARE": "NOT_RUN",
+    "HMI": "NOT_RUN",
+    "POWER_LOSS": "NOT_RUN",
+    "macOSExecution": "NOT_RUN"
+  },
+  "schema": 1,
+  "kind": "ACCEPTED_PREVIEW",
+  "siteManifestSha256": "D9102F9E77CD4BC98F9CF00767DEBDB10D6446F05D0DA012F6417287D26C05DB",
+  "preview": {
+    "candidateId": "0.1.8-20261116-001",
+    "url": "https://mars-program.github.io/pe0400c0-hex-updater-preview/candidates/0.1.8-20261116-001/",
+    "manifestUrl": "https://mars-program.github.io/pe0400c0-hex-updater-preview/candidates/0.1.8-20261116-001/candidate.json",
+    "manifestSha256": "B7462A7671378B1558222ECD8D4BA092614A2FB37CE36F02A14D2A1AEC085E4A"
+  },
+  "approval": {
+    "reference": "User acceptance in this chat on 2026-11-16: 0.1.8 tested successfully; publish production and matching local version, retain old versions and complete Git history. This accepts the previously delivered immutable candidate 0.1.8-20261116-001, record SHA256 B7462A7671378B1558222ECD8D4BA092614A2FB37CE36F02A14D2A1AEC085E4A. BOOT:TASK-20261116-004; source PR #5; no authority for future releases or device operations.",
+    "recordedAt": "2026-11-15T18:27:52+00:00"
+  }
+}
