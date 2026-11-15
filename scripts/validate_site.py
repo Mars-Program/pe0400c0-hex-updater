@@ -4,7 +4,7 @@ import argparse,gzip,hashlib,json,os,re,shutil,subprocess,sys
 sys.path.insert(0,str(Path(__file__).resolve().parent))
 from preview_contract import verify_release
 
-ROOT_ASSETS={'index.html','app.js','channel.js','journal.js','preferences.js','site-context.js','style.css'}
+ROOT_ASSETS={'index.html','app.js','engine-loader.js','channel.js','journal.js','preferences.js','site-context.js','style.css'}
 VERSION=re.compile(r'(0|[1-9][0-9]{0,2})\.(0|[1-9][0-9]{0,2})\.(0|[1-9][0-9]{0,2})\Z')
 
 def require(condition,message):

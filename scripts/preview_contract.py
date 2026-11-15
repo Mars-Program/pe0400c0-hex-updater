@@ -10,7 +10,7 @@ SOURCE = 'Mars-Program/pe0400c0-hex-updater-source'
 BASELINE_MANIFEST = '5D4705E9BD37B8EA2B685035CC45311657EA174C08A64B089353625F0112B176'
 BASELINE_SOURCE = 'd303c7d663c4d315d748df3f953c812c1e8d5bf1'
 BASELINE_ZIP = '297ECD60B1D842AEAC96C5C68B383AAD4306F8F73AAAE7BCA2E3995B72BEFCBB'
-ASSETS = {'index.html', 'app.js', 'channel.js', 'journal.js', 'preferences.js', 'site-context.js', 'style.css'}
+ASSETS = {'index.html', 'app.js', 'engine-loader.js', 'channel.js', 'journal.js', 'preferences.js', 'site-context.js', 'style.css'}
 NOTICES = {'notices/DotNet-LICENSE.TXT', 'notices/DotNet-THIRD-PARTY-NOTICES.TXT'}
 
 

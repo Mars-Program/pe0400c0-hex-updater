@@ -1,0 +1,30 @@
+{
+  "version": "0.1.7",
+  "sourceRepository": "Mars-Program/pe0400c0-hex-updater-source",
+  "sourceCommit": "10a51049d19783f4e022dc0a213d479e3697ab67",
+  "sourceTree": "c2c409317586f4e4f5bb16199157ed8b2a64d334",
+  "localZipName": "PE0400C0_HEX_Updater_Web_0.1.7_DRAFT-20261115-001.zip",
+  "localZipSha256": "9A972259A5DD47B19AF2CD9DE6973DDFCFB20237518D1F4862DEBDD9FE7B0671",
+  "validation": {
+    "BUILD": "PASS",
+    "OFFLINE": "PASS",
+    "TRANSPORT": "NOT_RUN",
+    "HARDWARE": "NOT_RUN",
+    "HMI": "NOT_RUN",
+    "POWER_LOSS": "NOT_RUN",
+    "macOSExecution": "NOT_RUN"
+  },
+  "schema": 1,
+  "kind": "ACCEPTED_PREVIEW",
+  "siteManifestSha256": "DECA622105578DBB95A730C95A83AE7507AC8FEE76B25F691F93BA4B2B3D4285",
+  "preview": {
+    "candidateId": "0.1.7-20261116-001",
+    "url": "https://mars-program.github.io/pe0400c0-hex-updater-preview/candidates/0.1.7-20261116-001/",
+    "manifestUrl": "https://mars-program.github.io/pe0400c0-hex-updater-preview/candidates/0.1.7-20261116-001/candidate.json",
+    "manifestSha256": "DB76F44A5A74668D858D86DA52459AA861C48690516174567AEEC93D9A4D4090"
+  },
+  "approval": {
+    "reference": "User direction 2026-11-16: implement the corrected device-first BOOT/action workflow, publish production after tests, deliver the matching local version and retain history. Exact candidate 0.1.7-20261116-001 with record SHA256 DB76F44A5A74668D858D86DA52459AA861C48690516174567AEEC93D9A4D4090 is the frozen implementation. Source PR #4 and BOOT:TASK-20261116-002 record tests. Physical authorization is version QUERY only. No authority for future releases.",
+    "recordedAt": "2026-11-15T17:44:17+00:00"
+  }
+}
