@@ -1,6 +1,8 @@
 """Validate an immutable publication and optionally materialize its exact Pages artifact."""
 from pathlib import Path,PurePosixPath
-import argparse,gzip,hashlib,json,os,re,shutil,subprocess
+import argparse,gzip,hashlib,json,os,re,shutil,subprocess,sys
+sys.path.insert(0,str(Path(__file__).resolve().parent))
+from preview_contract import verify_release
 
 ROOT_ASSETS={'index.html','app.js','channel.js','journal.js','preferences.js','site-context.js','style.css'}
 VERSION=re.compile(r'(0|[1-9][0-9]{0,2})\.(0|[1-9][0-9]{0,2})\.(0|[1-9][0-9]{0,2})\Z')
@@ -68,7 +70,8 @@ def validate(root,base_ref=None):
             data=(root/n).read_bytes()
             require(hashlib.sha1(b'blob '+str(len(data)).encode()+b'\0'+data).hexdigest()==identity,'Previous version mutated: '+n)
         require(all(n in old or PurePosixPath(n).parts[1] not in old_versions for n in entries if n.startswith('versions/')),'File added to an immutable version')
-    return manifest,entries,{'result':'PASS','version':version,'siteManifestSha256':digest,'sourceCommit':release['sourceCommit'],'files':len(entries)+1}
+    preview=verify_release(root,release,entries)
+    return manifest,entries,{'result':'PASS','version':version,'siteManifestSha256':digest,'sourceCommit':release['sourceCommit'],'files':len(entries)+1,**preview}
 
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--root',default='.');parser.add_argument('--base-ref');parser.add_argument('--out')

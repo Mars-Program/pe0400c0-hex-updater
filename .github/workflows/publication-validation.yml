@@ -20,4 +20,6 @@ jobs:
       - name: Verify hashes and immutable releases
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
-        run: python scripts/validate_site.py --base-ref "$BASE_SHA"
+        run: |
+          python scripts/validate_site.py --base-ref "$BASE_SHA"
+          python scripts/promote_preview.py --verify
