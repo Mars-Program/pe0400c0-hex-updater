@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "version": "0.1.5",
+  "kind": "EXISTING_ENGINEERING_PREVIEW",
+  "sourceRepository": "Mars-Program/pe0400c0-hex-updater-source",
+  "sourceCommit": "d303c7d663c4d315d748df3f953c812c1e8d5bf1",
+  "sourceTag": "source-v0.1.5",
+  "publicVersionCommit": "2c987201fe20003b57cdf019242f57654d450474",
+  "publicVersionTag": "v0.1.5",
+  "siteManifestSha256": "A4FA8A987C0FF9D50B67D1B091B24F2E060DE9FFF29887F929781D6F5BC6EB98",
+  "localZipName": "PE0400C0_HEX_Updater_Web_0.1.5_DRAFT-20261115-006.zip",
+  "localZipSha256": "297ECD60B1D842AEAC96C5C68B383AAD4306F8F73AAAE7BCA2E3995B72BEFCBB",
+  "validation": {
+    "BUILD": "PASS",
+    "OFFLINE": "PASS",
+    "TRANSPORT": "NOT_RUN",
+    "HARDWARE": "NOT_RUN",
+    "HMI": "NOT_RUN",
+    "POWER_LOSS": "NOT_RUN",
+    "macOSExecution": "NOT_RUN"
+  },
+  "checks": {
+    "csharp": 210,
+    "javascript": 19,
+    "go": 6,
+    "chromeLocal": 77,
+    "chromeSecondOrigin": 77
+  },
+  "acceptance": "Existing 0.1.5 release accepted before migration. User explicitly requested transfer to Mars-Program and reviewed future releases on 2026-11-15. This is not acceptance of new functionality.",
+  "historicalHardware": "0.1.4 Windows Chrome physical update PASS; not a 0.1.5 hardware test."
+}

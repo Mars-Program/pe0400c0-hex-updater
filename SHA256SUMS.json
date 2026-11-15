@@ -25,8 +25,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 2747,
-      "sha256": "282FFF4A46D07395D77872B20975D18FF115A50B9C07A8DC3C34FEA98934A8FE"
+      "bytes": 3199,
+      "sha256": "5806526662DE9793FF27FF68BA0BF915154CDF1A3529BEEDB8909E48C5967533"
     },
     {
       "path": "versions/0.1.4/_framework/blazor.webassembly.js",

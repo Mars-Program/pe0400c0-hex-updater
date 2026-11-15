@@ -1,6 +1,6 @@
 # PE0400C0 HEX Updater Web 0.1.5
 
-[Open in desktop Chrome](https://marstw2.github.io/pe0400c0-hex-updater/)
+[Open in desktop Chrome](https://mars-program.github.io/pe0400c0-hex-updater/)
 
 Engineering preview for Windows 11 and macOS 27 desktop Chrome. Select an APP HEX,
 wait for automatic validation, select your USB serial device, review the target,
@@ -28,13 +28,21 @@ Runtime: .NET 10 LTS 10.0.15; build SDK: 10.0.404. Users install neither .NET no
 Node. Original downloadable local packages remain available from the project
 maintainer; this repository contains only the reviewed static web publication.
 
-## Deployment and maintenance
+## Development and approved releases
 
-GitHub Pages publishes the root of `main` with `.nojekyll` and HTTPS. The fixed
-entry redirects to `versions/0.1.5/`; retain version directories unchanged.
-Deploy each reviewed future release in a new version directory, then update the
-entry redirect. Keep the same origin to retain browser history and preferences.
-Rollback redirects only to a separately validated release; never clear journals.
+Owned by **Mars-Program**. Full source is maintained in the organization's private
+`pe0400c0-hex-updater-source` repository. This repository keeps the original 0.1.4
+and 0.1.5 history and only publishes reviewed static assets.
+
+Current engineering baseline: **0.1.5**. Feature work uses branches and PRs, with
+build checks and an explicit user acceptance record. Merging or tagging never
+updates the live website. Production uses the manually dispatched **Publish
+approved website** workflow and waits for MarsTW2's environment approval.
+
+See [release procedure](RELEASE_PROCESS.md) and [current artifact identities](releases/current.json).
+Keep all version directories and release tags immutable. A rollback also requires
+approval. GitHub repository redirects do not redirect the old GitHub Pages URL;
+use the organization website above. Original-origin histories are not migrated.
 
 `SHA256SUMS.json` binds the published files; runtime licensing notices are in
 `notices/`. This repository contains no device firmware, developer QA, raw logs,
