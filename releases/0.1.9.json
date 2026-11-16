@@ -1,0 +1,30 @@
+{
+  "version": "0.1.9",
+  "sourceRepository": "Mars-Program/pe0400c0-hex-updater-source",
+  "sourceCommit": "dfc20a8209af287765a697c84a16d4be5bb45f64",
+  "sourceTree": "b7cd165befdda6da0f54123eb420bec0e8879712",
+  "localZipName": "PE0400C0_HEX_Updater_Web_0.1.9_DRAFT-20261116-001.zip",
+  "localZipSha256": "339C197990C60BDC2B09893B2CA3D25843EE1C4042C3998BC5477B33CCB3F5DB",
+  "validation": {
+    "BUILD": "PASS",
+    "OFFLINE": "PASS",
+    "TRANSPORT": "NOT_RUN",
+    "HARDWARE": "NOT_RUN",
+    "HMI": "NOT_RUN",
+    "POWER_LOSS": "NOT_RUN",
+    "macOSExecution": "NOT_RUN"
+  },
+  "schema": 1,
+  "kind": "ACCEPTED_PREVIEW",
+  "siteManifestSha256": "D6FE16A9134888D2D41D41E55C62C134F341970DBE197B525E487F80A1A0860C",
+  "preview": {
+    "candidateId": "0.1.9-20261116-001",
+    "url": "https://mars-program.github.io/pe0400c0-hex-updater-preview/candidates/0.1.9-20261116-001/",
+    "manifestUrl": "https://mars-program.github.io/pe0400c0-hex-updater-preview/candidates/0.1.9-20261116-001/candidate.json",
+    "manifestSha256": "BE0CD07D09941F769B3F8BE5A3F976ECB04656AF84B60AB3E327FAA88FB09954"
+  },
+  "approval": {
+    "reference": "Explicit user reply in this chat on 2026-11-16 to the linked 0.1.9 Mac trial question: 已試用，連線正常，可以發布正式版. Accepted candidate 0.1.9-20261116-001, record SHA256 BE0CD07D09941F769B3F8BE5A3F976ECB04656AF84B60AB3E327FAA88FB09954. BOOT:TASK-20261116-006; source PR #6. Authorizes this exact source merge, production publication and matching local delivery; no future release, firmware promotion or device-operation authority.",
+    "recordedAt": "2026-11-16T03:03:34+00:00"
+  }
+}
