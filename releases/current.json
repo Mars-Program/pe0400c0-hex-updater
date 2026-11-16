@@ -1,10 +1,10 @@
 {
-  "version": "0.1.8",
+  "version": "0.1.9",
   "sourceRepository": "Mars-Program/pe0400c0-hex-updater-source",
-  "sourceCommit": "de2ada6d820b4390e065c14aaa9bff0b89df30bb",
-  "sourceTree": "73fc44ddb9f8cc827a16420e5319544758a64159",
-  "localZipName": "PE0400C0_HEX_Updater_Web_0.1.8_DRAFT-20261115-001.zip",
-  "localZipSha256": "F1BC9FB626F5914678F58E7164A6834C206A1F4259AD6CD1464AAB8986826426",
+  "sourceCommit": "dfc20a8209af287765a697c84a16d4be5bb45f64",
+  "sourceTree": "b7cd165befdda6da0f54123eb420bec0e8879712",
+  "localZipName": "PE0400C0_HEX_Updater_Web_0.1.9_DRAFT-20261116-001.zip",
+  "localZipSha256": "339C197990C60BDC2B09893B2CA3D25843EE1C4042C3998BC5477B33CCB3F5DB",
   "validation": {
     "BUILD": "PASS",
     "OFFLINE": "PASS",
@@ -16,15 +16,15 @@
   },
   "schema": 1,
   "kind": "ACCEPTED_PREVIEW",
-  "siteManifestSha256": "D9102F9E77CD4BC98F9CF00767DEBDB10D6446F05D0DA012F6417287D26C05DB",
+  "siteManifestSha256": "D6FE16A9134888D2D41D41E55C62C134F341970DBE197B525E487F80A1A0860C",
   "preview": {
-    "candidateId": "0.1.8-20261116-001",
-    "url": "https://mars-program.github.io/pe0400c0-hex-updater-preview/candidates/0.1.8-20261116-001/",
-    "manifestUrl": "https://mars-program.github.io/pe0400c0-hex-updater-preview/candidates/0.1.8-20261116-001/candidate.json",
-    "manifestSha256": "B7462A7671378B1558222ECD8D4BA092614A2FB37CE36F02A14D2A1AEC085E4A"
+    "candidateId": "0.1.9-20261116-001",
+    "url": "https://mars-program.github.io/pe0400c0-hex-updater-preview/candidates/0.1.9-20261116-001/",
+    "manifestUrl": "https://mars-program.github.io/pe0400c0-hex-updater-preview/candidates/0.1.9-20261116-001/candidate.json",
+    "manifestSha256": "BE0CD07D09941F769B3F8BE5A3F976ECB04656AF84B60AB3E327FAA88FB09954"
   },
   "approval": {
-    "reference": "User acceptance in this chat on 2026-11-16: 0.1.8 tested successfully; publish production and matching local version, retain old versions and complete Git history. This accepts the previously delivered immutable candidate 0.1.8-20261116-001, record SHA256 B7462A7671378B1558222ECD8D4BA092614A2FB37CE36F02A14D2A1AEC085E4A. BOOT:TASK-20261116-004; source PR #5; no authority for future releases or device operations.",
-    "recordedAt": "2026-11-15T18:27:52+00:00"
+    "reference": "Explicit user reply in this chat on 2026-11-16 to the linked 0.1.9 Mac trial question: 已試用，連線正常，可以發布正式版. Accepted candidate 0.1.9-20261116-001, record SHA256 BE0CD07D09941F769B3F8BE5A3F976ECB04656AF84B60AB3E327FAA88FB09954. BOOT:TASK-20261116-006; source PR #6. Authorizes this exact source merge, production publication and matching local delivery; no future release, firmware promotion or device-operation authority.",
+    "recordedAt": "2026-11-16T03:03:34+00:00"
   }
 }
