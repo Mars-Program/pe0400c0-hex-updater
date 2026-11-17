@@ -1,0 +1,30 @@
+{
+  "version": "0.1.10",
+  "sourceRepository": "Mars-Program/pe0400c0-hex-updater-source",
+  "sourceCommit": "e5003f9f6a5407f7b5f56838bb220194e62e8289",
+  "sourceTree": "223b481c93f4fd0290d048948715fb6ff534044a",
+  "localZipName": "HEX_Updater_Web_0.1.10_DRAFT-20261117-002.zip",
+  "localZipSha256": "66802B5D11910A59465AA68137CF8DDD39F2126FD401E8BEE98C1B8AD787C800",
+  "validation": {
+    "BUILD": "PASS",
+    "OFFLINE": "PASS",
+    "TRANSPORT": "NOT_RUN",
+    "HARDWARE": "NOT_RUN",
+    "HMI": "NOT_RUN",
+    "POWER_LOSS": "NOT_RUN",
+    "macOSExecution": "NOT_RUN"
+  },
+  "schema": 1,
+  "kind": "ACCEPTED_PREVIEW",
+  "siteManifestSha256": "D44458041487D8160BDC411F304F014C24784D99E12770882B4FB11A26BD832E",
+  "preview": {
+    "candidateId": "0.1.10-20261117-002",
+    "url": "https://mars-program.github.io/pe0400c0-hex-updater-preview/candidates/0.1.10-20261117-002/",
+    "manifestUrl": "https://mars-program.github.io/pe0400c0-hex-updater-preview/candidates/0.1.10-20261117-002/candidate.json",
+    "manifestSha256": "07D3E0F1604395D201C778A44AA83A1460A0C0DDB440E3DD88BD6DF93CB2168C"
+  },
+  "approval": {
+    "reference": "Explicit user instruction in this chat on 2026-11-17 (Asia/Taipei): 這樣可以，請將候選版 0.1.10-20261117-002 正式發布，並確認 GitHub 更新網站已切換到新版。 Accepted candidate 0.1.10-20261117-002, candidate.json SHA256 07D3E0F1604395D201C778A44AA83A1460A0C0DDB440E3DD88BD6DF93CB2168C; source PR #7. Authorizes this exact source merge, production publication and website verification; the accepted existing runtime bytes are promoted without rebuilding.",
+    "recordedAt": "2026-11-17T05:41:30+00:00"
+  }
+}

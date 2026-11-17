@@ -1,10 +1,10 @@
 {
-  "version": "0.1.9",
+  "version": "0.1.10",
   "sourceRepository": "Mars-Program/pe0400c0-hex-updater-source",
-  "sourceCommit": "dfc20a8209af287765a697c84a16d4be5bb45f64",
-  "sourceTree": "b7cd165befdda6da0f54123eb420bec0e8879712",
-  "localZipName": "PE0400C0_HEX_Updater_Web_0.1.9_DRAFT-20261116-001.zip",
-  "localZipSha256": "339C197990C60BDC2B09893B2CA3D25843EE1C4042C3998BC5477B33CCB3F5DB",
+  "sourceCommit": "e5003f9f6a5407f7b5f56838bb220194e62e8289",
+  "sourceTree": "223b481c93f4fd0290d048948715fb6ff534044a",
+  "localZipName": "HEX_Updater_Web_0.1.10_DRAFT-20261117-002.zip",
+  "localZipSha256": "66802B5D11910A59465AA68137CF8DDD39F2126FD401E8BEE98C1B8AD787C800",
   "validation": {
     "BUILD": "PASS",
     "OFFLINE": "PASS",
@@ -16,15 +16,15 @@
   },
   "schema": 1,
   "kind": "ACCEPTED_PREVIEW",
-  "siteManifestSha256": "D6FE16A9134888D2D41D41E55C62C134F341970DBE197B525E487F80A1A0860C",
+  "siteManifestSha256": "D44458041487D8160BDC411F304F014C24784D99E12770882B4FB11A26BD832E",
   "preview": {
-    "candidateId": "0.1.9-20261116-001",
-    "url": "https://mars-program.github.io/pe0400c0-hex-updater-preview/candidates/0.1.9-20261116-001/",
-    "manifestUrl": "https://mars-program.github.io/pe0400c0-hex-updater-preview/candidates/0.1.9-20261116-001/candidate.json",
-    "manifestSha256": "BE0CD07D09941F769B3F8BE5A3F976ECB04656AF84B60AB3E327FAA88FB09954"
+    "candidateId": "0.1.10-20261117-002",
+    "url": "https://mars-program.github.io/pe0400c0-hex-updater-preview/candidates/0.1.10-20261117-002/",
+    "manifestUrl": "https://mars-program.github.io/pe0400c0-hex-updater-preview/candidates/0.1.10-20261117-002/candidate.json",
+    "manifestSha256": "07D3E0F1604395D201C778A44AA83A1460A0C0DDB440E3DD88BD6DF93CB2168C"
   },
   "approval": {
-    "reference": "Explicit user reply in this chat on 2026-11-16 to the linked 0.1.9 Mac trial question: 已試用，連線正常，可以發布正式版. Accepted candidate 0.1.9-20261116-001, record SHA256 BE0CD07D09941F769B3F8BE5A3F976ECB04656AF84B60AB3E327FAA88FB09954. BOOT:TASK-20261116-006; source PR #6. Authorizes this exact source merge, production publication and matching local delivery; no future release, firmware promotion or device-operation authority.",
-    "recordedAt": "2026-11-16T03:03:34+00:00"
+    "reference": "Explicit user instruction in this chat on 2026-11-17 (Asia/Taipei): 這樣可以，請將候選版 0.1.10-20261117-002 正式發布，並確認 GitHub 更新網站已切換到新版。 Accepted candidate 0.1.10-20261117-002, candidate.json SHA256 07D3E0F1604395D201C778A44AA83A1460A0C0DDB440E3DD88BD6DF93CB2168C; source PR #7. Authorizes this exact source merge, production publication and website verification; the accepted existing runtime bytes are promoted without rebuilding.",
+    "recordedAt": "2026-11-17T05:41:30+00:00"
   }
 }
