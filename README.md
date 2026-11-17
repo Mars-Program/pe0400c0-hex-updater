@@ -1,65 +1,81 @@
-# PE0400C0 HEX Updater Web 0.1.7
+# HEX Updater Web 0.1.10
 
-[Open in desktop Chrome](https://mars-program.github.io/pe0400c0-hex-updater/)
+[Open HEX Updater in desktop Chrome](https://mars-program.github.io/pe0400c0-hex-updater/)
 
-Engineering tool for Windows 11 and macOS 27 desktop Chrome. Connect and identify
-your device first, review its BOOT-dependent available actions, then choose an APP
-HEX for automatic validation. The next step checks the live device again before
-the final RESET confirmation. The device must be connected to your own computer.
+Connect a USB device attached to your computer and identify its firmware before
+choosing an APP file. The initial page is generic: project information and
+available operations appear only after a supported BOOT or BOOT+APP has been
+identified. USB descriptors, file names and remembered settings do not select a
+project. There is no manual board selector.
 
-Version 0.1.7 recognizes the BOOT 4.0 family using a revisioned compatibility
-registry. Unknown families are blocked. A matching version does not replace exact
-live capability, contract, Flash or package checks. APP HEX/RESET is implemented;
-image and video actions display their availability but have no sender in this
-tool. Live media capability is not queried. Back to device clears the reviewed
-identity and prepared package, requiring identification again.
+**Connect & identify** performs read-only discovery. If an EAO device reports only
+its APP, select **Verify BOOT** to enter BOOT, read its identity and return to the
+unchanged APP. This separate, explicit step does not write firmware. Unknown or
+incomplete identities do not enable update actions.
+
+## Supported APP update flows
+
+- **EAO-R02:** select a compatible PRESERVE v5 `.dataimgAPP` package or APP HEX.
+  The tool verifies the package and connected BOOT, shows transfer progress,
+  checks the MCU verification/commit result and confirms the restarted XIP APP.
+  The supported BOOT 0.1.0 and RTC-fixed headless APP can enter update mode over
+  FT234XD USB UART without ST-LINK or manual power cycling. BOOT self-update,
+  media-enabled APPs and display operations are not supported by this adapter.
+- **PE0400C0:** the existing APP HEX RESET flow remains available after compatible
+  firmware identification. RESET replaces the APP and resets image/video
+  catalogs; media must be installed again afterward. Image/video sending is not
+  implemented here. BOOT direction affects only BOOT waiting/update/recovery
+  screens, not APP orientation.
+
+Board identity, BOOT/APP versions and the shared updater version remain separate.
+Exact live capabilities, contract, Flash geometry and package checks are required
+before an update. Transfer progress reaching 100% alone is not success.
 
 HEX parsing, package creation and serial communication happen on your computer.
-Firmware is not uploaded to GitHub. This website has public anonymous access;
-knowing the link is not an access-control mechanism.
+Firmware is not uploaded to GitHub. The website is publicly accessible; its URL
+is not access control. Users do not need to install .NET or Node.
 
-BOOT direction affects only waiting, update and recovery screens. APP display
-orientation is unchanged. RESET replaces the APP and resets image/video catalogs;
-install media again afterward. Only a matching MCU verification/commit result is
-success; transfer 100% is not success.
+Use one updater at a time. Preview and production pages on
+`mars-program.github.io` share browser journals, permissions and device locks;
+local tools use a separate origin. Resolve an interrupted or uncertain result in
+the original tool. Do not clear its history or switch tools to retry. Export the
+diagnostic log for engineering review if the device result is unknown.
 
-Web and local tools have separate histories, settings, tab locks and device
-permissions. Resolve any interrupted or uncertain update in the original tool
-before continuing. Use only one updater at a time. This reminder appears in the
-final update confirmation; selecting Update once acknowledges it. There is no
-separate firmware-step checkbox. The confirmation cannot inspect another origin
-or clear a known unresolved session. Export a log and ask
-engineering to diagnose an unknown device result; do not switch tools to retry.
+## Accepted release
 
-Runtime: .NET 10 LTS 10.0.15; build SDK: 10.0.404. Users install neither .NET nor
-Node. Original downloadable local packages remain available from the project
-maintainer; this repository contains only the reviewed static web publication.
+Version **0.1.10** promotes the unchanged runtime from accepted candidate
+**0.1.10-20261117-002**. The user explicitly approved production publication on
+2026-11-17. [Fixed version](https://mars-program.github.io/pe0400c0-hex-updater/versions/0.1.10/)
+and [accepted preview](https://mars-program.github.io/pe0400c0-hex-updater-preview/candidates/0.1.10-20261117-002/)
+remain permanent. Older version directories, tags and release records are retained.
 
-## Development and approved releases
+The candidate passed 955 C# checks, 45 JavaScript checks, six launcher cases and
+69 Windows Chrome browser checks against the exact CI runtime. Separate physical
+EAO-R02 tests with that runtime on Windows Chrome verified APP-only gating, BOOT
+inspection and return, a complete USB APP update with MCU VERIFY/COMMIT and XIP
+self-test, BOOT-only discovery, cancellation back to APP and five final UART
+queries. APP generation advanced from 11 to 12 during the update; BOOT 0.1.0 and
+APP 0.1.4 remained the installed versions. No ST-LINK or manual power cycle was
+used. These device results are separate from the original CI identity, which
+correctly records no hardware operations by CI.
 
-Owned by **Mars-Program**. Full source is maintained in the organization's private
-`pe0400c0-hex-updater-source` repository. This repository keeps the original 0.1.4
-and 0.1.5 history and only publishes reviewed static assets.
+PE physical hardware, HMI, power-loss, memory endurance and macOS execution were
+not tested for this candidate. Cross-platform builds do not establish execution
+on those platforms.
 
-Current engineering baseline: **0.1.7**. Feature work uses branches and PRs, with
-build checks and an explicit user acceptance record. Merging or tagging never
-updates the live website. Production uses the manually dispatched **Publish
-approved website** workflow and waits for MarsTW2's environment approval.
+## Development and publication
 
-See [release procedure](RELEASE_PROCESS.md) and [current artifact identities](releases/current.json).
-Keep all version directories and release tags immutable. A rollback also requires
-approval. GitHub repository redirects do not redirect the old GitHub Pages URL;
-use the organization website above. Original-origin histories are not migrated.
+Owned by **Mars-Program**. The private `pe0400c0-hex-updater-source` repository
+contains source and matching local packages. The original CI ZIP name and hash
+are retained, including its DRAFT suffix, to preserve accepted artifact identity.
+This public repository contains only reviewed website assets and release records.
 
-`SHA256SUMS.json` binds the published files; runtime licensing notices are in
-`notices/`. This repository contains no device firmware, developer QA, raw logs,
-debug symbols or original BOOT/APP project. Compiled browser code is downloadable.
-Third-party notices do not grant a license for the project-specific updater code.
+See [release procedure](RELEASE_PROCESS.md) and
+[current artifact identities](releases/current.json). Publication requires checked
+PRs, exact user acceptance, manual workflow dispatch and the protected production
+environment review. Merging or tagging alone does not deploy.
 
-Verification: 765 C# checks, 27 JavaScript checks, 6 launcher cases and 51 Windows
-Chrome offline workflow checks using the exact CI WASM with simulated serial.
-The hosted candidate also passed read-only identification of BOOT 4.0.16 / APP
-4.2.1, rejection of an invalid HEX and automatic validation of a real APP HEX.
-No update payload was sent during that test. Physical update, HMI, POWER_LOSS and
-macOS execution remain NOT_RUN for 0.1.7. BUILD/OFFLINE and a read-only query never
-establish a successful physical firmware update.
+`SHA256SUMS.json` binds the published files. Third-party notices are in `notices/`;
+they do not grant a license for project-specific updater code. No device firmware,
+HEX fixtures, raw diagnostics or developer QA is published here. Browser runtime
+code is downloadable.
