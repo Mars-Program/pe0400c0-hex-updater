@@ -1,4 +1,4 @@
-# HEX Updater Web 0.1.10
+# HEX Updater Web 0.1.11
 
 [Open HEX Updater in desktop Chrome](https://mars-program.github.io/pe0400c0-hex-updater/)
 
@@ -8,7 +8,11 @@ available operations appear only after a supported BOOT or BOOT+APP has been
 identified. USB descriptors, file names and remembered settings do not select a
 project. There is no manual board selector.
 
-**Connect & identify** performs read-only discovery. If an EAO device reports only
+**Choose COM & identify** opens Chrome's port chooser each time. After identifying
+a device, use **Change COM device** to select another port. Selecting a new
+device clears the prepared file and requires a fresh identity check. If both
+read-only APP queries receive zero bytes, the tool stops and offers a diagnostic
+log. It leaves firmware untouched. If an EAO device reports only
 its APP, select **Verify BOOT** to enter BOOT, read its identity and return to the
 unchanged APP. This separate, explicit step does not write firmware. Unknown or
 incomplete identities do not enable update actions.
@@ -43,25 +47,21 @@ diagnostic log for engineering review if the device result is unknown.
 
 ## Accepted release
 
-Version **0.1.10** promotes the unchanged runtime from accepted candidate
-**0.1.10-20261117-002**. The user explicitly approved production publication on
-2026-11-17. [Fixed version](https://mars-program.github.io/pe0400c0-hex-updater/versions/0.1.10/)
-and [accepted preview](https://mars-program.github.io/pe0400c0-hex-updater-preview/candidates/0.1.10-20261117-002/)
-remain permanent. Older version directories, tags and release records are retained.
+Version **0.1.11** promotes candidate **0.1.11-20261117-001**, approved on
+2026-11-18. When an EAO APP has a quiet startup, the updater can request a
+fresh APP identity after a silent legacy probe or a recognized EAO reply.
+EAO project actions still require a verified BOOT 0.1.0. Boards waiting for
+activation must complete activation before an APP update.
+[Fixed 0.1.11 website](https://mars-program.github.io/pe0400c0-hex-updater/versions/0.1.11/) ·
+[Accepted preview](https://mars-program.github.io/pe0400c0-hex-updater-preview/candidates/0.1.11-20261117-001/)
 
-The candidate passed 955 C# checks, 45 JavaScript checks, six launcher cases and
-69 Windows Chrome browser checks against the exact CI runtime. Separate physical
-EAO-R02 tests with that runtime on Windows Chrome verified APP-only gating, BOOT
-inspection and return, a complete USB APP update with MCU VERIFY/COMMIT and XIP
-self-test, BOOT-only discovery, cancellation back to APP and five final UART
-queries. APP generation advanced from 11 to 12 during the update; BOOT 0.1.0 and
-APP 0.1.4 remained the installed versions. No ST-LINK or manual power cycle was
-used. These device results are separate from the original CI identity, which
-correctly records no hardware operations by CI.
-
-PE physical hardware, HMI, power-loss, memory endurance and macOS execution were
-not tested for this candidate. Cross-platform builds do not establish execution
-on those platforms.
+The frozen build passed 1,002 C# checks and 45 JavaScript checks.
+All 78 Windows Chrome checks with simulated serial ports passed on its
+WebAssembly runtime. The operator confirmed COM reselection. A field session
+recorded zero received bytes and stopped before any firmware update. A complete
+field-board update with this version, physical HMI, power-loss behavior and
+macOS execution remain unverified.
+[Previous 0.1.10 release and hardware evidence](https://github.com/Mars-Program/pe0400c0-hex-updater/releases/tag/v0.1.10)
 
 ## Development and publication
 
