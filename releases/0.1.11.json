@@ -1,0 +1,30 @@
+{
+  "version": "0.1.11",
+  "sourceRepository": "Mars-Program/pe0400c0-hex-updater-source",
+  "sourceCommit": "d3b08027454073fe1a9ac9b22859e61648d9367e",
+  "sourceTree": "5490ee9a054493a10b667c8f214f1f43ea587622",
+  "localZipName": "HEX_Updater_Web_0.1.11_DRAFT-20261117-001.zip",
+  "localZipSha256": "1AC874A2F9E8CDA6D3AEBE9C216CB90E32E60073F0ACA0C3187E6E8CEF920C1A",
+  "validation": {
+    "BUILD": "PASS",
+    "OFFLINE": "PASS",
+    "TRANSPORT": "NOT_RUN",
+    "HARDWARE": "NOT_RUN",
+    "HMI": "NOT_RUN",
+    "POWER_LOSS": "NOT_RUN",
+    "macOSExecution": "NOT_RUN"
+  },
+  "schema": 1,
+  "kind": "ACCEPTED_PREVIEW",
+  "siteManifestSha256": "4A3BAE94B45AAAC55CDD32D6743F9914BBB7115F9472C0A00F175914530E8D9A",
+  "preview": {
+    "candidateId": "0.1.11-20261117-001",
+    "url": "https://mars-program.github.io/pe0400c0-hex-updater-preview/candidates/0.1.11-20261117-001/",
+    "manifestUrl": "https://mars-program.github.io/pe0400c0-hex-updater-preview/candidates/0.1.11-20261117-001/candidate.json",
+    "manifestSha256": "ED98E34AA1661B1D7599A32343A77891D6C2D72B5C928DB85242BC27AD7D74DE"
+  },
+  "approval": {
+    "reference": "Release owner authorized Web HEX Updater 0.1.11 on 2026-11-18 (Asia/Taipei), BOOT:TASK-20261118-001. The reviewed 0.1.11 preview is 0.1.11-20261117-001 with candidate.json SHA-256 ED98E34AA1661B1D7599A32343A77891D6C2D72B5C928DB85242BC27AD7D74DE.",
+    "recordedAt": "2026-11-18T13:21:20+00:00"
+  }
+}
